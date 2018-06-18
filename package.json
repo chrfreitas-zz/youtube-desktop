@@ -1,0 +1,22 @@
+{
+  "name": "youtube-desktop",
+  "version": "1.0.0",
+  "description": "A project using electron to create a youtube desktop application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrfreitas/youtube-desktop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrfreitas/youtube-desktop/issues"
+  },
+  "homepage": "https://github.com/chrfreitas/youtube-desktop#readme",
+  "dependencies": {
+    "electron": "^2.0.2"
+  }
+}
