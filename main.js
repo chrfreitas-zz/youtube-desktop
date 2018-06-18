@@ -1,20 +1,24 @@
 const { app, BrowserWindow } = require('electron')
 
 let mainWindow
+const config = {
+  title: "Youtube",
+  width: 1000,
+  height: 800,
+  icon: './static/icon/youtube.png',
+  center: true,
+}
 
 function onReady () {
-  const config = {
-    width: 1000,
-    height: 800,
-    icon: './static/icon/youtube.png'
-  }
-
   app.dock.setIcon(config.icon)
+
   mainWindow = new BrowserWindow(config)
   mainWindow.loadURL('https://youtube.com')
-  mainWindow.on('closed', function () {
-    mainWindow = null
-  })
+  mainWindow.on('closed', onClosed)
+}
+
+function onClosed() {
+  mainWindow = null
 }
 
 function onWindowAllClosed() {
@@ -25,7 +29,7 @@ function onWindowAllClosed() {
 
 function onActivate() {
   if (mainWindow === null) {
-    createWindow()
+    onReady()
   }
 }
 
