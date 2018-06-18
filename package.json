@@ -4,7 +4,10 @@
   "description": "A project using electron to create a youtube desktop application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "install:mac": "electron-packager  . Youtube --overwrite --platform=darwin --arch=x64 --icon=static/icon/youtube.icns --prune=true",
+    "install:window": "electron-packager . Youtube --overwrite --asar=true --platform=win32 --arch=ia32 --icon=static/icon/youtube.ico --prune=true",
+    "install:linux": "electron-packager . Youtube --overwrite --asar=true --platform=linux --arch=x64 --icon=static/icon/youtube.png --prune=true"
   },
   "repository": {
     "type": "git",
@@ -16,7 +19,8 @@
     "url": "https://github.com/chrfreitas/youtube-desktop/issues"
   },
   "homepage": "https://github.com/chrfreitas/youtube-desktop#readme",
-  "dependencies": {
+  "devDependencies": {
+    "electron-packager": "^12.1.0",
     "electron": "^2.0.2"
   }
 }
