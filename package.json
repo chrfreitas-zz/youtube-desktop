@@ -5,9 +5,9 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "install:mac": "electron-packager  . Youtube --overwrite --platform=darwin --arch=x64 --icon=static/icon/youtube.icns --prune=true",
-    "install:window": "electron-packager . Youtube --overwrite --asar=true --platform=win32 --arch=ia32 --icon=static/icon/youtube.ico --prune=true",
-    "install:linux": "electron-packager . Youtube --overwrite --asar=true --platform=linux --arch=x64 --icon=static/icon/youtube.png --prune=true"
+    "build:mac": "electron-packager  . Youtube --overwrite --platform=darwin --arch=x64 --icon=static/icon/youtube.icns --prune=true",
+    "build:window": "electron-packager . Youtube --overwrite --asar=true --platform=win32 --arch=ia32 --icon=static/icon/youtube.ico --prune=true",
+    "build:linux": "electron-packager . Youtube --overwrite --asar=true --platform=linux --arch=x64 --icon=static/icon/youtube.png --prune=true"
   },
   "repository": {
     "type": "git",
